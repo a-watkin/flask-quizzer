@@ -1,0 +1,29 @@
+body {
+    background: #1b7723;
+}
+
+.container-fluid {
+    background: white;
+}
+
+h2 {
+    padding-top: 1em;
+    min-height: 4em;
+}
+
+#question-container {
+    padding: 1em;
+    margin-top: 10%;
+    max-width: 640px;
+    border: solid green;
+}
+
+.btn {
+    margin: 0.5em;
+    min-width: 10em;
+}
+
+#message-area {
+    min-height: 5em;
+    max-height: 3.6em;
+}

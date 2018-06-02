@@ -1,0 +1,89 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container-fluid justify-content-center align-middle" id="question-container">
+
+    <div class="row">
+
+        <div class="col d-flex justify-content-center">
+
+            <h2 id="question-text"></h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="row" id="message-area">
+
+        <div class="col d-flex justify-content-center">
+
+            <div hidden class="alert alert-success text-center" id="correct">
+                Congrats you did it!
+            </div>
+
+            <div hidden class="alert alert-danger text-center" id="incorrect">
+                You dun goofed! Try again.
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="row">
+
+        <div class="col d-flex justify-content-center">
+
+            <button hidden class="btn btn-success btn-lg btn-block" id="continue">Continue</button>
+
+        </div>
+
+    </div>
+
+
+    <div class="row align-items-center answers">
+
+
+
+        <div class="col d-flex justify-content-center" >
+            <button 
+            class="btn btn-primary btn-lg btn-block" id="answer-one">
+
+            </button>
+        </div>
+
+        <div class="col d-flex justify-content-center">
+            <button 
+            class="btn btn-primary btn-lg btn-block" id="answer-two">
+
+            </button>
+        </div>
+    
+    </div>        
+    
+
+    <div class="row answers">
+
+        <div class="col d-flex justify-content-center" >
+            <button 
+            class="btn btn-primary btn-lg btn-block" id="answer-three">
+
+            </button>
+        </div>
+
+
+        <div class="col d-flex justify-content-center">
+            <button 
+            class="btn btn-primary btn-lg btn-block" id="answer-four">
+
+            </button>
+        </div>
+
+    </div>
+
+
+</div>
+
+{% endblock %}
