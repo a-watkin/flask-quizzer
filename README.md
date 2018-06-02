@@ -1,3 +1,3 @@
-# Flask review
+# Flask quizzer
 
-Reviewing some flask stuff from the real python course for future projects.
+An web app for learning the capitals of countries.
