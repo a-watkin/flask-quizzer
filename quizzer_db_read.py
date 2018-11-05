@@ -12,20 +12,19 @@ class Quizzer:
         self.target_country = ''
 
         # connect to the database
-        country_db="./country_database.db"
-        connection=sqlite3.connect(country_db)
-        cursor=connection.cursor()
+        country_db = "./country_database.db"
+        connection = sqlite3.connect(country_db)
+        cursor = connection.cursor()
 
         # query the database and return all matching values
-        cursor.execute('SELECT country_name, capital_city FROM country WHERE has_capital=1')
-        rows=cursor.fetchall()
+        cursor.execute(
+            'SELECT country_name, capital_city FROM country WHERE has_capital=1')
+        rows = cursor.fetchall()
 
         # populate the country_capital dict with country and capital data
         for country, capital_city in rows:
             self.country_capital[country] = capital_city
             self.capital_country[capital_city] = country
-
-
 
     def get_question_list(self):
         question_list = []
@@ -45,10 +44,10 @@ class Quizzer:
 
         random.shuffle(question_list)
 
-        question_string = 'What is the capital of {}?'.format(self.target_country)
+        question_string = 'What is the capital of {}?'.format(
+            self.target_country)
 
-        return question_string, question_list 
-
+        return question_string, question_list
 
 
 def main():
@@ -74,9 +73,6 @@ def main():
     # print(q.target_country)
     # lookup the target country in country_capital to get the answer
     # print(q.country_capital[q.target_country])
-
-
-
 
 
 if __name__ == '__main__':

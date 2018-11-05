@@ -33,6 +33,7 @@ def api_values():
         'target_country': q.target_country
     }
 
+    print(question_data)
     return jsonify(question_data)
 
 
@@ -45,7 +46,6 @@ def search(search_query):
     data = {'country_name': country_name}
 
     return jsonify(data)
-
 
 
 if __name__ == '__main__':
